@@ -16,7 +16,7 @@ export function useLocate() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://ip-api.com/json/")
+    fetch("/api/ip-api")
       .then((res) => {
         return res.json();
       })
@@ -24,8 +24,11 @@ export function useLocate() {
         setData(d);
         setLoading(false);
       })
-      .catch(() => setLoading(false));
+      .catch((err) => {
+        console.error("Failed to fetch data from API: ", err);
+        setLoading(false);
+      });
   }, []);
 
-  return {data, loading};
+  return { data, loading };
 }
