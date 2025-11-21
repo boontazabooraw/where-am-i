@@ -9,6 +9,7 @@ interface DataInterface {
   regionName: string;
   zip: string;
   proxy: boolean;
+  hosting: boolean;
 }
 
 export function useLocate() {

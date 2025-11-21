@@ -49,7 +49,7 @@ export default function Card() {
           <h1>{data?.isp}</h1>
         </div>
         <div className="text-center text-sm">
-          {data?.proxy ? (
+          {data?.proxy || data?.hosting ? (
             <h1 className="text-green-500 text-shadow-lg text-shadow-green-500/20 hover:text-shadow-green-500/40 transition-all duration-400">You are protected.</h1>
           ) : (
             <h1 className="text-red-600 text-shadow-lg text-shadow-red-500/20 hover:text-shadow-red-500/40 transition-all duration-400">
