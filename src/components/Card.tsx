@@ -19,13 +19,13 @@ export default function Card() {
     bg-radial from-green-500/30 to-transparent hover:text-shadow-green-500/30 transition-all duration-700"
     >
       <div className="flex flex-col gap-3">
-        <div className="flex flex-row items-center justify-between gap-3">
+        <div className="flex flex-row items-center justify-center gap-3">
           <div>
-            <Globe size={75} />
+            <Globe size={50} />
           </div>
           <div className="">
-            <h2 className="text-3xl tracking-wide">Your Ip Address</h2>
-            <h1 className="text-4xl font-black">{data?.query}</h1>
+            <h2 className="text-xl tracking-wide">Your Ip Address</h2>
+            <h1 className="text-2xl font-black">{data?.query}</h1>
           </div>
         </div>
         <div className="flex flex-row justify-center items-center gap-5">
@@ -40,11 +40,11 @@ export default function Card() {
               svg
             />
           )} */}
-          <h1 className="text-xl">{data?.country}</h1>
-          <h1 className="text-xl">{data?.regionName}</h1>
-          <h1 className="text-xl">{data?.zip}</h1>
+          <h1 className="">{data?.country}</h1>
+          <h1 className="">{data?.regionName}</h1>
+          <h1 className="">{data?.zip}</h1>
         </div>
-        <h1 className="text-3xl tracking-widest text-center">{time}</h1>
+        <h1 className="text-xl tracking-widest text-center">{time}</h1>
         <div className="text-center">
           <h1>{data?.isp}</h1>
         </div>
