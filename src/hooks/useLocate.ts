@@ -16,7 +16,7 @@ export function useLocate() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://ip-api.com/json/")
+    fetch("/api/ip-api")
       .then((res) => {
         return res.json();
       })
