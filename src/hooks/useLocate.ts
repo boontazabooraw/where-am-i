@@ -15,11 +15,11 @@ export function useLocate() {
   const [data, setData] = useState<DataInterface | null>(null);
   const [loading, setLoading] = useState(true);
 
-  //http://ip-api.com/json
-  ///api/ip-api
+  // http://ip-api.com/json
+  // /api/ip-api
 
   useEffect(() => {
-    fetch("http://ip-api.com/json")
+    fetch("/api/ip-api")
       .then((res) => {
         return res.json();
       })
